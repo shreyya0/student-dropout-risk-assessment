@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  # ── FastAPI Backend ──
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: student-risk-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data  # Persist SQLite database
+      - ./models/artifacts:/app/models/artifacts  # Model files
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── Streamlit Dashboard ──
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: student-risk-dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  model-data:
+  prediction-data:
