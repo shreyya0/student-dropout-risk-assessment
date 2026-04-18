@@ -1,4 +1,4 @@
-# 🎓 Student Dropout Risk Assessment
+# Student Dropout Risk Assessment
 
 An **AI-powered early warning system** that predicts student dropout risk using machine learning, provides SHAP-based explainability, and offers what-if simulation for intervention planning.
 
@@ -6,7 +6,7 @@ An **AI-powered early warning system** that predicts student dropout risk using 
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 | Feature | Description |
 |---------|-------------|
@@ -22,7 +22,7 @@ An **AI-powered early warning system** that predicts student dropout risk using 
 
 ---
 
-## 📐 Architecture
+## Architecture
 
 ```
 ├── config/settings.py          # Centralized configuration
@@ -57,7 +57,7 @@ An **AI-powered early warning system** that predicts student dropout risk using 
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.10+
@@ -98,7 +98,7 @@ pytest tests/ -v
 
 ---
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 ```bash
 docker-compose up --build
@@ -130,7 +130,7 @@ docker-compose up --build
 
 ---
 
-## 🧠 ML Pipeline Details
+## ML Pipeline Details
 
 ### Dataset
 - **Source**: [UCI ML Repository — Predict Students' Dropout and Academic Success](https://archive.ics.uci.edu/dataset/697)
@@ -158,7 +158,7 @@ Models are compared using:
 
 ---
 
-## 📊 Dashboard Pages
+## Dashboard Pages
 
 ### 1. Individual Risk Assessment
 - Animated Plotly risk gauge
@@ -187,7 +187,7 @@ Models are compared using:
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|------------|---------|
@@ -200,13 +200,13 @@ Models are compared using:
 
 ---
 
-## 📄 License
+## License
 
 This project is for educational and portfolio purposes.
 
 ---
 
-## 📚 References
+## References
 
 1. Realinho, V., Machado, J., Baptista, L., & Martins, M.V. (2022). Predicting Student Dropout and Academic Success. *Data*, 7(11), 146.
 2. Lundberg, S.M. & Lee, S.I. (2017). A Unified Approach to Interpreting Model Predictions. *NeurIPS*.
